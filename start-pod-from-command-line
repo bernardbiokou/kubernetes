@@ -1,0 +1,4 @@
+kubectl run --image=mmumshad/simple-webapp-color \
+--env="APP_COLOR=red" \
+--restart=Never \
+simple-webapp-color
