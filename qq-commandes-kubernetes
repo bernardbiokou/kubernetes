@@ -1,0 +1,17 @@
+les labels :
+kubectl get pod --show-labels
+kubectl get pod -l app=nginx --namespace=production
+kubectl get pod -l env!=production --namespace=production
+kubectl get pod -l 'env in (production)' --namespace=production
+kubectl get pod -l 'app notin (nginx)' --namespace=production  dont le label n'a pas une valeur égale à une valeur dans la parenthèse.
+
+
+kubectl delete -f nginx-deploy : pour supprimer notre deployment
+
+kubectl delete pod webapp-color || kubectl delete -f pod.yml pour supprimer le pod 
+
+voir les replicaset : kubectl get replicasetapps
+
+voir les services et les endpoints associes dans un namespace particulier
+
+kubectl describe "service ou svc" nom_du_service --namespace=production
